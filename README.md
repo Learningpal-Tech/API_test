@@ -39,6 +39,6 @@ python request_POST.py <PATH>
 ###### Result of sample1
 ![](results_render/sample1.png)
 
-- ![](https://placehold.it/15/EEB2EE/000000?text=+) `Table region`
-- ![](https://placehold.it/15/B2EEEE/000000?text=+) `unknow closed region`
-- ![](https://placehold.it/15/EEEEB2/000000?text=+) `Text region`
+- ![](https://placehold.it/15/EEB2EE/000000?text=+) `Table region, Table structure row/col info includes in result JSON`
+- ![](https://placehold.it/15/B2EEEE/000000?text=+) `unknow closed region, future work: block classification and caption`
+- ![](https://placehold.it/15/EEEEB2/000000?text=+) `Text region, future work: OCR, handwriting recognition`
