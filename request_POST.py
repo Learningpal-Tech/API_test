@@ -6,7 +6,8 @@ if len(sys.argv) > 1:
 else:
     f = open('./sample1.png', 'rb')
 
-files = {'file':f}
+files = {'file': f}
+data = {'lang': 'JPN'}
 response = requests.post(url, files=files)
 result = response.json()
 
