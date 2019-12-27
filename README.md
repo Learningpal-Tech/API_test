@@ -10,6 +10,9 @@
 * 7. Image caption
 
 ----------
+## What's new
+#### Update 12-26-2019
+##### 1. OCR implement, language flag is required, default is English if not specify 
 #### Update 12-10-2019
 ##### 1. Layout analysis
 ##### 2. Image auto correction (orientation correction)
@@ -26,11 +29,12 @@
 ```
 python request_POST.py
 ```
-##### Or POST with your own file
+##### Or POST with your own file. (language flag is option, default: English)
 ```
-python request_POST.py <PATH>
+python request_POST.py sample1.jpeg JPN
 ```
 ##### result JSON file get_```result.json``` will be save under root
+##### Each page has ```render_img_url_``` key, which is the layout demostrate of the page with color
 ----
 ## Sample Demo:
 ###### Sample1 image
