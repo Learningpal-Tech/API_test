@@ -12,4 +12,4 @@ response = requests.post(url, files=files, data=data)
 result = response.json()
 
 with open('get_result.json', 'w') as outf:
-    outf.write(json.dumps(result, indent=4, sort_keys=True)) 
+    outf.write(json.dumps(result, indent=4, sort_keys=True, ensure_ascii=False)) 
