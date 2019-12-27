@@ -7,8 +7,8 @@ else:
     f = open('./sample1.png', 'rb')
 
 files = {'file': f}
-data = {'lang': 'JPN'}
-response = requests.post(url, files=files)
+data = {'lang': 'jpn'}
+response = requests.post(url, files=files, data=data)
 result = response.json()
 
 with open('get_result.json', 'w') as outf:
