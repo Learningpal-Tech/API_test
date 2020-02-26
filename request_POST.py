@@ -1,7 +1,7 @@
 import requests, sys, json, time
 
 url = 'http://test.learningpal.com:8887'
-key = '372c8a74-9d19-4b99-b580-e98b27ba1cf3' # Ask admin to get valid key
+key = 'placehold' # Ask admin to get valid key
 lang = 'eng'
 if len(sys.argv) == 2:
     f = open(sys.argv[1], 'rb')
