@@ -1,48 +1,36 @@
 # This repo is for LearningPal document processing service testing.
 
-## The goal of this service is to provide API that perform image based document analysis, give back 
+## The goal of this service is to provide API that perform image based document analysis
 * 1. Layout analysis - region segmentation (Image, Table, Text, Form, etc.)
 * 2. Image auto correction (orientation correction)
 * 3. Table detection and (structure)recognition
 * 4. Text detection and OCR
-* 5. Handwriting detection and Recognition
-* 6. Formula detection and Recognition
-* 7. Image caption
+* 5. QR code/bar code detection and recognition
+* 6. Handwriting detection and Recognition
+* 7. Output Excel if necessary
+
 
 ----------
-## What's new
-#### Update 12-26-2019
-##### 1. OCR implement, language flag is required, default is English if not specify 
-#### Update 12-10-2019
-##### 1. Layout analysis
-##### 2. Image auto correction (orientation correction)
-##### 3. Table detection and (structure)recognition
-
-----------
-## Requirements
-1. Document File, can be Image or PDF
-2. High quality is recommended
------
 ## How to test:
-##### Clone this repo
-##### POST sample image to see result
+##### 1. Get a valid key from admin, paste the key flag in ```request_POST.py``` 
+##### 2. POST sample image to see result (High quality image recommanded)
 ```
 python request_POST.py
 ```
 ##### Or POST with your own file. (language flag is option, default: English)
 ```
-python request_POST.py sample1.jpeg JPN
+python request_POST.py sample1.jpeg ENG
 ```
-##### result JSON file get_```result.json``` will be save under root
+##### 3. ```result.json``` will be save under root
 ##### Each page has ```render_img_url_``` key, which is the layout demostrate of the page with color
 ----
 ## Sample Demo:
 ###### Sample1 image
 ![](sample1.jpeg)
 
-###### Result of sample1
-![](results_render/sample1.png)
+###### Result of sample1 in spreadsheet format
+![](results_render/EX_sample1_page0.png)
 
-- ![](https://placehold.it/15/EEB2EE/000000?text=+) `Table region, Table structure row/col info includes in result JSON`
-- ![](https://placehold.it/15/B2EEEE/000000?text=+) `unknow closed region, future work: block classification and caption`
-- ![](https://placehold.it/15/EEEEB2/000000?text=+) `Text region, future work: OCR, handwriting recognition`
+- ![](https://placehold.it/15/FF0000/000000?text=+) `Low confidence`
+- ![](https://placehold.it/15/008000/000000?text=+) `High confidence`
+- ![](https://placehold.it/15/FFFF99/000000?text=+) `Could be wrong`
